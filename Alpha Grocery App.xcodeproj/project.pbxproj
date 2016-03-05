@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		897B99071C7D5AF10029437B /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B99061C7D5AF10029437B /* FoodItem.swift */; };
+		897B99091C7D5D5E0029437B /* FoodItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B99081C7D5D5E0029437B /* FoodItemStore.swift */; };
 		89CEE58B1C7D45920093CFA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CEE58A1C7D45920093CFA5 /* AppDelegate.swift */; };
-		89CEE58D1C7D45920093CFA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CEE58C1C7D45920093CFA5 /* ViewController.swift */; };
+		89CEE58D1C7D45920093CFA5 /* FoodItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CEE58C1C7D45920093CFA5 /* FoodItemViewController.swift */; };
 		89CEE5901C7D45920093CFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CEE58E1C7D45920093CFA5 /* Main.storyboard */; };
 		89CEE5921C7D45920093CFA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89CEE5911C7D45920093CFA5 /* Assets.xcassets */; };
 		89CEE5951C7D45920093CFA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CEE5931C7D45920093CFA5 /* LaunchScreen.storyboard */; };
 		89CEE5A01C7D45920093CFA5 /* Alpha_Grocery_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CEE59F1C7D45920093CFA5 /* Alpha_Grocery_AppTests.swift */; };
 		89CEE5AB1C7D45920093CFA5 /* Alpha_Grocery_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CEE5AA1C7D45920093CFA5 /* Alpha_Grocery_AppUITests.swift */; };
+		89CEE5B91C7D540E0093CFA5 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CEE5B81C7D540E0093CFA5 /* FoodItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		897B99061C7D5AF10029437B /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		897B99081C7D5D5E0029437B /* FoodItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemStore.swift; sourceTree = "<group>"; };
 		89CEE5871C7D45920093CFA5 /* Alpha Grocery App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpha Grocery App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CEE58A1C7D45920093CFA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		89CEE58C1C7D45920093CFA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89CEE58C1C7D45920093CFA5 /* FoodItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemViewController.swift; sourceTree = "<group>"; };
 		89CEE58F1C7D45920093CFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89CEE5911C7D45920093CFA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89CEE5941C7D45920093CFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		89CEE5A61C7D45920093CFA5 /* Alpha Grocery AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alpha Grocery AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CEE5AA1C7D45920093CFA5 /* Alpha_Grocery_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alpha_Grocery_AppUITests.swift; sourceTree = "<group>"; };
 		89CEE5AC1C7D45920093CFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89CEE5B81C7D540E0093CFA5 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		89CEE57E1C7D45920093CFA5 = {
 			isa = PBXGroup;
 			children = (
+				89CEE5B81C7D540E0093CFA5 /* FoodItemTableViewCell.swift */,
 				89CEE5891C7D45920093CFA5 /* Alpha Grocery App */,
 				89CEE59E1C7D45920093CFA5 /* Alpha Grocery AppTests */,
 				89CEE5A91C7D45920093CFA5 /* Alpha Grocery AppUITests */,
@@ -98,11 +105,13 @@
 			isa = PBXGroup;
 			children = (
 				89CEE58A1C7D45920093CFA5 /* AppDelegate.swift */,
-				89CEE58C1C7D45920093CFA5 /* ViewController.swift */,
+				89CEE58C1C7D45920093CFA5 /* FoodItemViewController.swift */,
 				89CEE58E1C7D45920093CFA5 /* Main.storyboard */,
 				89CEE5911C7D45920093CFA5 /* Assets.xcassets */,
 				89CEE5931C7D45920093CFA5 /* LaunchScreen.storyboard */,
 				89CEE5961C7D45920093CFA5 /* Info.plist */,
+				897B99061C7D5AF10029437B /* FoodItem.swift */,
+				897B99081C7D5D5E0029437B /* FoodItemStore.swift */,
 			);
 			path = "Alpha Grocery App";
 			sourceTree = "<group>";
@@ -256,7 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89CEE58D1C7D45920093CFA5 /* ViewController.swift in Sources */,
+				89CEE5B91C7D540E0093CFA5 /* FoodItemTableViewCell.swift in Sources */,
+				897B99071C7D5AF10029437B /* FoodItem.swift in Sources */,
+				897B99091C7D5D5E0029437B /* FoodItemStore.swift in Sources */,
+				89CEE58D1C7D45920093CFA5 /* FoodItemViewController.swift in Sources */,
 				89CEE58B1C7D45920093CFA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +496,7 @@
 				89CEE5B11C7D45920093CFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89CEE5B21C7D45920093CFA5 /* Build configuration list for PBXNativeTarget "Alpha Grocery AppTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +505,7 @@
 				89CEE5B41C7D45920093CFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89CEE5B51C7D45920093CFA5 /* Build configuration list for PBXNativeTarget "Alpha Grocery AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +514,7 @@
 				89CEE5B71C7D45920093CFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
