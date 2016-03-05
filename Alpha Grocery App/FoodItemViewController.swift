@@ -19,9 +19,11 @@ class FoodItemViewController: UITableViewController {
     return foodItemStore.allFoodItems.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //Creates an instance of UITableViewCell with default appearance
-        let cell = UITableViewCell(style: .Value1, reuseIdentifier: "UITableViewCell")
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->
+        UITableViewCell {
+        
+        //Create a new or recycled cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
         
         //Set the text on the cell with description of the item that is the nth index of
         // items, where n = row this cell will appear in on the tableview
@@ -29,6 +31,15 @@ class FoodItemViewController: UITableViewController {
         cell.textLabel?.text = foodItem.name
         cell.detailTextLabel?.text = "$\(foodItem.quantity)"
         return cell
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Get the height of the status bar
+        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = insets
+        tableView.scrollIndicatorInsets = insets
     }
 
 
