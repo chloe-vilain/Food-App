@@ -14,7 +14,7 @@ class FoodItemStore {
     
     func createFoodItem() -> FoodItem {
         let newFoodItem = FoodItem(name: "Chloes food",quantity: 2)
-        allFoodItems.append(newFoodItem)
+        allFoodItems.insert(newFoodItem, atIndex: 0)
         return newFoodItem
         
     }
