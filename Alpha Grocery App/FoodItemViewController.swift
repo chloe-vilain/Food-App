@@ -12,6 +12,28 @@ class FoodItemViewController: UITableViewController {
 
     var foodItemStore : FoodItemStore!
     
+    @IBAction func addNewIten(sender: AnyObject) {
+        let newFoodItem = foodItemStore.createFoodItem()
+        if let index = foodItemStore.allFoodItems.indexOf(newFoodItem){
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+        
+        
+    }
+    
+    @IBAction func toggleEditingMode(sender: AnyObject) {
+        if editing {
+            sender.setTitle("Edit",forState: .Normal)
+            setEditing(false, animated: true)
+        }
+        else {
+            sender.setTitle("Done", forState: .Normal)
+            setEditing(true, animated: true)
+        }
+        
+    }
+    
     override func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) ->Int
     {
@@ -33,6 +55,14 @@ class FoodItemViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let foodItem = foodItemStore.allFoodItems[indexPath.row]
+            foodItemStore.removeFoodItem(foodItem)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Get the height of the status bar
@@ -41,7 +71,7 @@ class FoodItemViewController: UITableViewController {
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
     }
-
+    
 
 }
 

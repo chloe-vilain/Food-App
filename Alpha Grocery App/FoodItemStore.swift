@@ -18,10 +18,9 @@ class FoodItemStore {
         return newFoodItem
         
     }
-    
-    init() {
-        for _ in 0..<5 {
-            createFoodItem()
+    func  removeFoodItem(foodItem: FoodItem){
+        if let index = allFoodItems.indexOf(foodItem){
+            allFoodItems.removeAtIndex(index)
         }
     }
     

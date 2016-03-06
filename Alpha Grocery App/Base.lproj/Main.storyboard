@@ -13,9 +13,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="jSd-lC-lTb">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mat-a5-0CC">
+                                    <rect key="frame" x="28" y="15" width="30" height="30"/>
+                                    <state key="normal" title="Edit"/>
+                                    <connections>
+                                        <action selector="toggleEditingMode:" destination="0L8-Fw-qpr" eventType="touchUpInside" id="aqE-5a-a33"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xe-wI-YY5">
+                                    <rect key="frame" x="536" y="15" width="30" height="30"/>
+                                    <state key="normal" title="Add"/>
+                                    <connections>
+                                        <action selector="addNewIten:" destination="0L8-Fw-qpr" eventType="touchUpInside" id="cpt-8q-HSF"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="4xe-wI-YY5" firstAttribute="leading" secondItem="Mat-a5-0CC" secondAttribute="trailing" constant="8" id="AGT-wN-H5j"/>
+                                <constraint firstItem="4xe-wI-YY5" firstAttribute="centerY" secondItem="jSd-lC-lTb" secondAttribute="centerY" id="Zuw-a7-kjH"/>
+                                <constraint firstItem="Mat-a5-0CC" firstAttribute="centerY" secondItem="jSd-lC-lTb" secondAttribute="centerY" id="cJG-v6-t6f"/>
+                                <constraint firstItem="4xe-wI-YY5" firstAttribute="width" secondItem="Mat-a5-0CC" secondAttribute="width" id="d8x-Ko-2Cf"/>
+                                <constraint firstItem="Mat-a5-0CC" firstAttribute="leading" secondItem="jSd-lC-lTb" secondAttribute="leading" constant="8" id="gYQ-El-Rju"/>
+                                <constraint firstItem="4xe-wI-YY5" firstAttribute="width" secondItem="Mat-a5-0CC" secondAttribute="width" id="keM-7f-xyD"/>
+                                <constraint firstItem="4xe-wI-YY5" firstAttribute="leading" secondItem="Mat-a5-0CC" secondAttribute="trailing" constant="8" id="ocv-oG-yV5"/>
+                                <constraint firstAttribute="trailing" secondItem="4xe-wI-YY5" secondAttribute="trailing" constant="8" id="uJi-it-pAx"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="Zaa-sI-0rK" detailTextLabel="VWt-Kb-g66" style="IBUITableViewCellStyleValue1" id="0mQ-dB-3up">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0mQ-dB-3up" id="fCc-Fl-6zk">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -44,10 +75,13 @@
                             <outlet property="delegate" destination="0L8-Fw-qpr" id="0dk-vC-jQJ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="view" destination="Mat-a5-0CC" id="H8M-lg-m72"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiZ-Fy-ZPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231" y="-87"/>
+            <point key="canvasLocation" x="-320" y="-247"/>
         </scene>
     </scenes>
 </document>
